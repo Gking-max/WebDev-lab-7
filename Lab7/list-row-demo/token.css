@@ -1,0 +1,15 @@
+/* token.css: reusable design VALUES; component layout stays in main.css. */
+/* :root selects the html element; its custom properties inherit by default. */
+:root {
+  --text-primary: oklch(0.20 0.014 250);
+  --text-muted: oklch(0.520 0.014 250);
+  --surface: oklch(0.990 0.004 250);
+  --surface-sunken: oklch(0.960 0.008 250);
+  /* one step darker than --surface: a faint fill for insets and the row hover */
+  --border: oklch(0.870 0.010 250);
+
+  --accent: oklch(0.50 0.13 250);
+  /* accent: actionable things */
+  --accent-hover: oklch(0.40 0.105 250);
+  /* accent, pressed/hovered */
+}

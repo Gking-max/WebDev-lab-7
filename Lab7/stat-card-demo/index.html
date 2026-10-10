@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Belize | Photos</title>
+  <!-- The reset comes first, reusable tokens second, page rules last. -->
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="token.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <main>
+    <h1>The Jewel of Central America</h1>
+
+    <!-- THE STAT STRIP: three summary cards. The numbers are simply the counts of
+         the four rows in the list below (2 birds, 1 mammal, 1 marine wonder).
+         Later, your Go server will COUNT these from a database instead of you typing them. -->
+    <section class="stat-strip" aria-label="Summary">
+      <article class="stat">
+        <!-- Column 1: the icon (decorative, so aria-hidden — the label says it in words) -->
+        <span class="stat-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="7.5" r="3"/><path d="M19 7.5l3 1-3 1"/><path d="M14.2 9.6C9 10 5 13.5 4 20c4-1 7-3 9-6"/><path d="M4 20l-1 2"/></svg>
+        </span>
+        <!-- Column 2: a small label over a big number -->
+        <div class="stat-body">
+          <p class="stat-label">Birds</p>
+          <p class="stat-number">2</p>
+        </div>
+      </article>
+      <article class="stat">
+        <!-- Column 1: the icon (decorative, so aria-hidden — the label says it in words) -->
+        <span class="stat-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="16" rx="4.2" ry="3.4"/><circle cx="6" cy="11" r="1.7"/><circle cx="10" cy="7" r="1.7"/><circle cx="14" cy="7" r="1.7"/><circle cx="18" cy="11" r="1.7"/></svg>
+        </span>
+        <!-- Column 2: a small label over a big number -->
+        <div class="stat-body">
+          <p class="stat-label">Mammals</p>
+          <p class="stat-number">1</p>
+        </div>
+      </article>
+      <article class="stat">
+        <!-- Column 1: the icon (decorative, so aria-hidden — the label says it in words) -->
+        <span class="stat-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>
+        </span>
+        <!-- Column 2: a small label over a big number -->
+        <div class="stat-body">
+          <p class="stat-label">Marine</p>
+          <p class="stat-number">1</p>
+        </div>
+      </article>
+    </section>
+
+    <div class="data-list">
+      <!-- ONE ROW -->
+      <a class="row" href="#">
+        <!-- Column 1: the leading icon (a small round thumbnail) -->
+        <img class="lead" src="images/toucan.png" alt="toucan perched among tropical leaves">
+        <!-- Column 2: the title over a line of metadata (what · where) -->
+        <div class="row-text">
+          <h3>Keel-billed Toucan</h3>
+          <p>National bird &middot; Chiquibul Forest</p>
+        </div>
+        <!-- Column 3: a category label + a chevron.
+             The chevron is decorative (aria-hidden) — the whole row is the link,
+             so the "›" is just a hint that the row goes somewhere.
+       -->
+        <div class="row-trail">
+          <span class="pill bird">Bird</span>
+          <span class="row-chev" aria-hidden="true">&rsaquo;</span>
+        </div>
+      </a>
+      <!-- ANOTHER ROW — same structure, different content -->
+      <a class="row" href="#">
+        <img class="lead" src="images/scarlet-macaw.png" alt="A scarlet macaw">
+        <div class="row-text">
+          <h3>Scarlet Macaw</h3>
+          <p>Parrot &middot; Chiquibul Forest</p>
+        </div>
+        <div class="row-trail">
+          <span class="pill bird">Bird</span>
+          <span class="row-chev" aria-hidden="true">&rsaquo;</span>
+        </div>
+      </a>
+      <!-- ANOTHER ROW — same structure, different content -->
+      <a class="row" href="#">
+        <img class="lead" src="images/jaguar.png" alt="A jaguar in the rainforest">
+        <div class="row-text">
+          <h3>Jaguar</h3>
+          <p>Big cat &middot; Cockscomb Basin</p>
+        </div>
+        <div class="row-trail">
+          <span class="pill mammal">Mammal</span>
+          <span class="row-chev" aria-hidden="true">&rsaquo;</span>
+        </div>
+      </a>
+      <!-- ANOTHER ROW — same structure, different content -->
+      <a class="row" href="#">
+        <img class="lead" src="images/blue-hole.png" alt="The Great Blue Hole from above">
+        <div class="row-text">
+          <h3>Great Blue Hole</h3>
+          <p>Marine sinkhole &middot; Lighthouse Reef</p>
+        </div>
+        <div class="row-trail">
+          <span class="pill marine">Marine</span>
+          <span class="row-chev" aria-hidden="true">&rsaquo;</span>
+        </div>
+      </a>
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+/* main.css: styling and layout for THIS page.
+   Load order matters: reset.css (defaults) -> token.css (values) -> main.css (this).
+   This file spends the tokens defined in token.css; it never hard-codes a colour. */
+
+
+/* The whole page: one font, and breathing room around the edges so the
+   gallery never sits flush against the browser window. */
+body {
+  font-family: system-ui, sans-serif;
+  /* the OS's own UI font — fast, familiar, no download */
+  padding: 2rem;
+  /* space between the content and the window edges */
+}
+
+
+/* The page heading. */
+h1 {
+  font-size: 1.5rem;
+  /* 1.5 x the root size (~24px) — clearly the biggest text on the page */
+  margin-bottom: 1rem;
+  /* a gap below the title before the gallery begins */
+  text-align: center;
+  /* centre the title over the gallery */
+}
+
+/* THE LIST — a bordered container that holds all the rows. */
+.data-list {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  /* clip each row's corners to the rounded container */
+  max-width: 720px;
+  /* a readable width — a list doesn't need the whole page */
+  margin-inline: auto;
+  /* centre the list under the centred heading */
+}
+
+/* A hairline BETWEEN rows only — never above the first or below the last.
+   `.row + .row` reads as "a .row that comes immediately AFTER another .row",
+   so the very first row is skipped. This is the clean way to draw list dividers. */
+.data-list .row+.row {
+  border-top: 1px solid var(--border);
+}
+
+
+/* ONE ROW — icon | text | trailing, on a single line.
+   The WHOLE row is a link (<a>): clicking anywhere on it goes to that record's
+   detail page (the "master -> detail" idea). One link wraps everything — there
+   is no separate "View" link inside, unlike the card footer. 
+*/
+.row {
+  display: grid;
+  /* auto minmax(0, 1fr) auto:
+     - auto           = the leading icon, sized to its own (small) content
+     - minmax(0, 1fr) = the text block, flexible. Why minmax(0, …) and not plain 1fr?
+                        A plain 1fr refuses to shrink below its content's width, so a
+                        very long title would shove the trailing column off the edge.
+                        minmax(0, 1fr) lowers that floor to 0, so the text can shrink
+                        and truncate instead of breaking the layout.
+     - auto           = the trailing region (status + chevron), sized to its content 
+  */
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  /* icon, text, and trailing all sit centred on one line */
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  /* these last two below usually go together to style a link */
+  text-decoration: none;
+  /* it IS a link, but we don't want the whole row underlined */
+  color: inherit;
+  /* use normal text colour, not the default link blue */
+}
+
+/* The whole row lights up on hover, so it reads as one big clickable target. */
+.row:hover {
+  background: var(--surface-sunken);
+  /* a faint fill across the entire row */
+}
+
+/* THE LEADING ICON — a small round thumbnail at the start of the row. */
+.lead {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  /* a circle */
+  object-fit: cover;
+  /* fill the circle, cropped, never distorted */
+}
+
+/* THE TEXT BLOCK — a title over a line of metadata; the flexible middle column. */
+.row-text h3 {
+  font-size: 1 rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  /* keep the title on one line...            */
+  overflow: hidden;
+  /* ...hide the part that doesn't fit...      */
+  text-overflow: ellipsis;
+  /* ...and show "…" so a long title degrades gracefully */
+}
+
+.row-text p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  /* the metadata line is secondary, so it's muted */
+}
+
+/* THE TRAILING REGION — a category/status label and a chevron, side by side.
+   Two KNOWN items on one line -> Grid (column flow), not Flexbox.
+*/
+.row-trail {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.row-status {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  /* a quiet category label (Bird / Mammal / Marine) */
+  white-space: nowrap;
+  /* never let the label wrap onto a second line */
+}
+
+/* The chevron is only a VISUAL hint that the row leads somewhere. It is NOT a
+   separate link (the whole row is the link), so in the HTML it is aria-hidden. */
+.row-chev {
+  color: var(--text-muted);
+  font-size: 1.25rem;
+}

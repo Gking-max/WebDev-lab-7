@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Belize | Photos</title>
+  <!-- The reset comes first, reusable tokens second, page rules last. -->
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="token.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <main>
+    <h1>The Jewel of Central America</h1>
+    <div class="data-list">
+      <!-- ONE ROW -->
+      <a class="row" href="#">
+        <!-- Column 1: the leading icon (a small round thumbnail) -->
+        <img class="lead" src="images/toucan.png" alt="toucan perched among tropical leaves">
+        <!-- Column 2: the title over a line of metadata (what · where) -->
+        <div class="row-text">
+          <h3>Keel-billed Toucan</h3>
+          <p>National bird &middot; Chiquibul Forest</p>
+        </div>
+        <!-- Column 3: a category label + a chevron.
+             The chevron is decorative (aria-hidden) — the whole row is the link,
+             so the "›" is just a hint that the row goes somewhere.
+       -->
+        <div class="row-trail">
+          <span class="row-status">Bird</span>
+          <span class="row-chev" aria-hidden="true">&rsaquo;</span>
+        </div>
+      </a>
+      <!-- ANOTHER ROW — same structure, different content -->
+      <a class="row" href="#">
+        <img class="lead" src="images/scarlet-macaw.png" alt="A scarlet macaw">
+        <div class="row-text">
+          <h3>Scarlet Macaw</h3>
+          <p>Parrot &middot; Chiquibul Forest</p>
+        </div>
+        <div class="row-trail">
+          <span class="row-status">Bird</span>
+          <span class="row-chev" aria-hidden="true">&rsaquo;</span>
+        </div>
+      </a>
+      <!-- ANOTHER ROW — same structure, different content -->
+      <a class="row" href="#">
+        <img class="lead" src="images/jaguar.png" alt="A jaguar in the rainforest">
+        <div class="row-text">
+          <h3>Jaguar</h3>
+          <p>Big cat &middot; Cockscomb Basin</p>
+        </div>
+        <div class="row-trail">
+          <span class="row-status">Mammal</span>
+          <span class="row-chev" aria-hidden="true">&rsaquo;</span>
+        </div>
+      </a>
+      <!-- ANOTHER ROW — same structure, different content -->
+      <a class="row" href="#">
+        <img class="lead" src="images/blue-hole.png" alt="The Great Blue Hole from above">
+        <div class="row-text">
+          <h3>Great Blue Hole</h3>
+          <p>Marine sinkhole &middot; Lighthouse Reef</p>
+        </div>
+        <div class="row-trail">
+          <span class="row-status">Marine</span>
+          <span class="row-chev" aria-hidden="true">&rsaquo;</span>
+        </div>
+      </a>
+    </div>
+  </main>
+</body>
+
+</html>
