@@ -1,0 +1,38 @@
+/* token.css: reusable design VALUES; component layout stays in main.css. */
+/* :root selects the html element; its custom properties inherit by default. */
+:root {
+  --text-primary: oklch(0.20 0.014 250);
+  --text-muted: oklch(0.520 0.014 250);
+  --surface: oklch(0.990 0.004 250);
+  --surface-sunken: oklch(0.960 0.008 250);
+  /* one step darker than --surface: a faint fill for insets and the row hover */
+  --border: oklch(0.870 0.010 250);
+
+  --accent: oklch(0.50 0.13 250);
+  /* accent: actionable things */
+  --accent-hover: oklch(0.40 0.105 250);
+  /* accent, pressed/hovered */
+
+  /* ----------------------------------------------------------------------------
+   CATEGORY PILL FAMILY — the status-pill technique, applied to animal types.
+   Derived in OKLCH the same way as a status family: one shared lightness and
+   one shared chroma for every pill; only the HUE changes per category. That
+   shared recipe is what makes the four read as ONE family instead of four
+   random colours. Each pale tint (bg) + saturated ink (fg) pair is verified to
+   pass WCAG contrast (worst 5.08:1) and to sit inside the sRGB gamut.
+ 
+   NOTE: a category has no "natural" colour (unlike a status, where green = done).
+   So which hue means which animal is an ARBITRARY but consistent choice — the
+   discipline is the even, contrast-checked family, not the specific hue.
+ 
+   Recipe:  bg = oklch(0.955 0.022 H)   fg = oklch(0.500 0.104 H)
+---------------------------------------------------------------------------- */
+
+  --cat-bird-bg:    oklch(0.955 0.022 150); --cat-bird-fg:    oklch(0.500 0.104 150); /* green  */
+  --cat-mammal-bg:  oklch(0.955 0.022 55);  --cat-mammal-fg:  oklch(0.500 0.104 55);  /* amber  */
+  --cat-marine-bg:  oklch(0.955 0.022 235); --cat-marine-fg:  oklch(0.500 0.104 235); /* blue   */
+  --cat-reptile-bg: oklch(0.955 0.022 305); --cat-reptile-fg: oklch(0.500 0.104 305); /* purple (spare, for later) */
+
+  --status-open-bg: var(--cat-bird-bg); --status-open-fg: var(--cat-bird-fg);
+
+}

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Belize | Photos</title>
+  <!-- The reset comes first, reusable tokens second, page rules last. -->
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="token.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <main>
+    <h1>The Jewel of Central America</h1>
+    <p class="pill-tests">
+      <span class="pill-label">Category:</span>
+      <span class="pill bird">Bird</span>
+      <span class="pill mammal">Mammal</span>
+      <span class="pill reptile">Reptile</span>
+      <span class="pill-label">Status:</span>
+      <span class="pill open">Open</span>
+    </p>
+    <section class="stat-strip" aria-label="Entry summary">
+      <article class="stat">
+        <span class="stat-icon" aria-hidden="true">#</span>
+        <div class="stat-body">
+          <p class="stat-label">Total entries</p>
+          <p class="stat-number">5</p>
+        </div>
+      </article>
+      <article class="stat">
+        <span class="stat-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="7.5" r="3"/><path d="M19 7.5l3 1-3 1"/><path d="M14.2 9.6C9 10 5 13.5 4 20c4-1 7-3 9-6"/><path d="M4 20l-1 2"/></svg>
+        </span>
+        <div class="stat-body">
+          <p class="stat-label">Bird entries</p>
+          <p class="stat-number">2</p>
+        </div>
+      </article>
+      <article class="stat">
+        <span class="stat-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="16" rx="4.2" ry="3.4"/><circle cx="6" cy="11" r="1.7"/><circle cx="10" cy="7" r="1.7"/><circle cx="14" cy="7" r="1.7"/><circle cx="18" cy="11" r="1.7"/></svg>
+        </span>
+        <div class="stat-body">
+          <p class="stat-label">Mammal entries</p>
+          <p class="stat-number">1</p>
+        </div>
+      </article>
+    </section>
+    <div class="data-list">
+      <!-- ONE ROW -->
+      <a class="row" href="#">
+        <!-- Column 1: the leading icon (a small round thumbnail) -->
+        <img class="lead" src="images/toucan.png" alt="toucan perched among tropical leaves">
+        <!-- Column 2: the title over a line of metadata (what · where) -->
+        <div class="row-text">
+          <h3>Keel-billed Toucan observed near the forest research station</h3>
+          <p>National bird &middot; Chiquibul Forest research station</p>
+        </div>
+        <!-- Column 3: a category label + a chevron.
+             The chevron is decorative (aria-hidden) — the whole row is the link,
+             so the "›" is just a hint that the row goes somewhere.
+       -->
+        <div class="row-trail">
+          <span class="pill bird">Bird</span>
+          <span class="row-chev" aria-hidden="true">&rsaquo;</span>
+        </div>
+      </a>
+      <!-- ANOTHER ROW — same structure, different content -->
+      <a class="row" href="#">
+        <img class="lead" src="images/scarlet-macaw.png" alt="A scarlet macaw">
+        <div class="row-text">
+          <h3>Scarlet Macaw</h3>
+          <p>Parrot &middot; Chiquibul Forest</p>
+        </div>
+        <div class="row-trail">
+          <span class="pill bird">Bird</span>
+          <span class="row-chev" aria-hidden="true">&rsaquo;</span>
+        </div>
+      </a>
+      <!-- ANOTHER ROW — same structure, different content -->
+      <a class="row" href="#">
+        <img class="lead" src="images/jaguar.png" alt="A jaguar in the rainforest">
+        <div class="row-text">
+          <h3>Jaguar</h3>
+          <p>Big cat &middot; Cockscomb Basin</p>
+        </div>
+        <div class="row-trail">
+          <span class="pill mammal">Mammal</span>
+          <span class="row-chev" aria-hidden="true">&rsaquo;</span>
+        </div>
+      </a>
+      <!-- ANOTHER ROW — same structure, different content -->
+      <a class="row" href="#">
+        <img class="lead" src="images/blue-hole.png" alt="The Great Blue Hole from above">
+        <div class="row-text">
+          <h3>Great Blue Hole</h3>
+          <p>Marine sinkhole &middot; Lighthouse Reef</p>
+        </div>
+        <div class="row-trail">
+          <span class="pill marine">Marine</span>
+          <span class="row-chev" aria-hidden="true">&rsaquo;</span>
+        </div>
+      </a>
+      <!-- A fifth row for a Belize reptile; the image is a placeholder and is clearly labelled as such. -->
+      <a class="row" href="#">
+        <img class="lead" src="images/jaguar.png" alt="Placeholder image for a Belize reptile; replace with a reptile photograph">
+        <div class="row-text">
+          <h3>Belizean Boa observed near the limestone cave trail</h3>
+          <p>Reptile &middot; Chaa Creek</p>
+        </div>
+        <div class="row-trail">
+          <span class="pill reptile">Reptile</span>
+          <span class="row-chev" aria-hidden="true">&rsaquo;</span>
+        </div>
+      </a>
+    </div>
+  </main>
+</body>
+
+</html>
